@@ -84,19 +84,20 @@ export default function BookingForm() {
     const ownerWhatsAppURL = `https://wa.me/918522002814?text=${encodeURIComponent(ownerMessage)}`
     const customerWhatsAppURL = `https://wa.me/91${data.phone.replace(/\D/g, '')}?text=${encodeURIComponent(customerMessage)}`
 
-    // Open WhatsApp for owner
+    // Open WhatsApp for owner first
     window.open(ownerWhatsAppURL, '_blank')
+    
+    setSubmitStatus('success')
     
     // Delay customer message and reset form
     setTimeout(() => {
       window.open(customerWhatsAppURL, '_blank')
-      setSubmitStatus('success')
       reset()
       setIsSubmitting(false)
       
       // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000)
-    }, 500)
+    }, 2000)
   }
 
   return (
