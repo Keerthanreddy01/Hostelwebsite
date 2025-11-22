@@ -29,57 +29,62 @@ export default function BookingForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Message for hostel owner - Enhanced formatting
+    // Message for hostel owner - Simple and clear for easy understanding
     const ownerMessage = 
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `🏠 *NEW BOOKING ENQUIRY*\n` +
+      `🔔 *नया कमरा बुकिंग का मैसेज*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
       
-      `👤 *GUEST DETAILS*\n` +
-      `   Name: *${data.name}*\n` +
-      `   Phone: *${data.phone}*\n` +
-      `   Email: ${data.email || 'Not provided'}\n\n` +
+      `👤 *नाम:* ${data.name}\n\n` +
       
-      `🛏️ *ROOM REQUIREMENT*\n` +
-      `   Type: *${data.roomType}*\n` +
-      `   Check-in: *${data.checkin}*\n\n` +
+      `📱 *मोबाइल नंबर:* ${data.phone}\n` +
+      `   (इस नंबर पर कॉल करें)\n\n` +
       
-      `💬 *MESSAGE*\n` +
-      `   ${data.message || 'No additional message'}\n\n` +
+      `🛏️ *कौन सा रूम चाहिए:*\n` +
+      `   ➜ *${data.roomType}*\n\n` +
+      
+      `📅 *कब आना है:* ${data.checkin}\n\n` +
+      
+      (data.email ? `📧 Email: ${data.email}\n\n` : '') +
+      
+      (data.message ? `💬 *खास बात:* ${data.message}\n\n` : '') +
+      
+      `⏰ समय: ${new Date().toLocaleString('en-IN', { 
+        timeZone: 'Asia/Kolkata', 
+        hour: '2-digit',
+        minute: '2-digit',
+        day: '2-digit',
+        month: 'short'
+      })}\n\n` +
       
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `⏰ Received: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' })}\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━`
+      `✅ कृपया इन्हें कॉल करके\n` +
+      `   कमरा उपलब्ध है बताएं`
 
     // Thank you message for customer - Enhanced formatting
     const customerMessage = 
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `✅ *BOOKING ENQUIRY RECEIVED*\n` +
+      `✅ *धन्यवाद! आपका मैसेज मिल गया*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
       
-      `Dear *${data.name}*,\n\n` +
-      `Thank you for your interest in our hostel! 🙏\n\n` +
+      `नमस्ते *${data.name}* जी,\n\n` +
+      `हमारे हॉस्टल में रुचि दिखाने के लिए धन्यवाद! 🙏\n\n` +
       
-      `📋 *YOUR ENQUIRY DETAILS*\n` +
+      `📋 *आपकी जानकारी*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `🛏️  Room Type: *${data.roomType}*\n` +
-      `📅  Check-in Date: *${data.checkin}*\n` +
-      `📱  Contact: *${data.phone}*\n` +
-      `${data.email ? `📧  Email: ${data.email}\n` : ''}` +
+      `🛏️  रूम: *${data.roomType}*\n` +
+      `📅  आने की तारीख: *${data.checkin}*\n` +
+      `📱  मोबाइल: *${data.phone}*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
       
-      `⏳ *NEXT STEPS*\n` +
-      `   ✓ Our team will review your request\n` +
-      `   ✓ We'll contact you within 2-3 hours\n` +
-      `   ✓ Availability will be confirmed\n\n` +
+      `⏳ *अगला कदम*\n` +
+      `   ✓ हम 2-3 घंटे में आपको कॉल करेंगे\n` +
+      `   ✓ कमरा उपलब्ध है या नहीं बताएंगे\n` +
+      `   ✓ सभी जानकारी देंगे\n\n` +
       
-      `🏠 *Meghana Reddy Executive Boys & PG Hostel*\n` +
-      `📍 Manikonda, Hyderabad\n` +
+      `🏠 *मेघना रेड्डी एक्सक्यूटिव बॉयज़ PG*\n` +
+      `📍 मणिकोंडा, हैदराबाद\n` +
       `📞 +91 8522002814\n\n` +
       
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `💚 Thank you for choosing us!\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━`
+      `💚 धन्यवाद!`
 
     const ownerWhatsAppURL = `https://wa.me/918522002814?text=${encodeURIComponent(ownerMessage)}`
     const customerWhatsAppURL = `https://wa.me/91${data.phone.replace(/\D/g, '')}?text=${encodeURIComponent(customerMessage)}`
