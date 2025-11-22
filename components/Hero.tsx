@@ -45,13 +45,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight px-4"
           >
-            Keerthi Reddy
+            Meghana Reddy
             <br />
             <span className="text-yellow-300">Executive Boys</span>
             <br />
-            <span className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white/90">& PG Hostel</span>
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white/90">& PG Hostel</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -59,11 +59,11 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light px-4"
           >
             Your Premium Home in <span className="font-semibold text-yellow-300">Manikonda, Hyderabad</span>
             <br />
-            <span className="text-lg text-white/80">Comfort • Safety • Convenience</span>
+            <span className="text-base sm:text-lg text-white/80">Comfort • Safety • Convenience</span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -71,16 +71,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 px-4 w-full max-w-2xl mx-auto"
           >
             <motion.a
               href="tel:+918522002814"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary-700 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-700 rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-3xl transition-all w-full sm:w-auto"
             >
-              <FiPhone className="w-6 h-6" />
-              Call: 8522002814
+              <FiPhone className="w-5 h-5 sm:w-6 sm:h-6" />
+              <span className="whitespace-nowrap">Call: 8522002814</span>
             </motion.a>
 
             <motion.a
@@ -89,9 +89,9 @@ export default function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-500 text-white rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl hover:bg-green-600 transition-all"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-green-500 text-white rounded-full font-bold text-base sm:text-lg shadow-2xl hover:shadow-3xl hover:bg-green-600 transition-all w-full sm:w-auto"
             >
-              <FaWhatsapp className="w-6 h-6" />
+              <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6" />
               WhatsApp Us
             </motion.a>
 
@@ -101,9 +101,9 @@ export default function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 rounded-full font-bold text-lg shadow-2xl hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 rounded-full font-bold text-base sm:text-lg shadow-2xl hover:bg-white/20 transition-all w-full sm:w-auto"
             >
-              <FiMapPin className="w-6 h-6" />
+              <FiMapPin className="w-5 h-5 sm:w-6 sm:h-6" />
               Directions
             </motion.a>
           </motion.div>

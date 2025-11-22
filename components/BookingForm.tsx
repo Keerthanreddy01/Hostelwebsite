@@ -44,7 +44,7 @@ export default function BookingForm() {
       `Dear ${data.name},\n\n` +
       `We have received your room availability request for *${data.roomType}*.\n\n` +
       `📞 We will contact you shortly at *${data.phone}* to confirm availability and discuss further details.\n\n` +
-      `🏠 *Keerthi Reddy Executive Boys & PG Hostel*\n` +
+      `🏠 *Meghana Reddy Executive Boys & PG Hostel*\n` +
       `📍 Manikonda, Hyderabad\n` +
       `📱 +91 8522002814\n\n` +
       `Thank you for choosing us! 🙏`

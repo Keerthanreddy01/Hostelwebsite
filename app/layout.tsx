@@ -10,21 +10,21 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Keerthi Reddy Executive Boys & PG Hostel | Manikonda Hyderabad',
+  title: 'Meghana Reddy Executive Boys & PG Hostel | Manikonda Hyderabad',
   description: 'Premium boys & PG hostel in Manikonda, Hyderabad. Comfortable rooms, safety, WiFi, CCTV, housekeeping, and convenient location. Book now.',
   keywords: ['hostel', 'PG', 'Hyderabad', 'Manikonda', 'boys hostel', 'accommodation'],
-  authors: [{ name: 'Keerthi Reddy Hostel' }],
+  authors: [{ name: 'Meghana Reddy Hostel' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#3b82f6' },
     { media: '(prefers-color-scheme: dark)', color: '#1e40af' }
   ],
   openGraph: {
-    title: 'Keerthi Reddy Executive Boys & PG Hostel',
+    title: 'Meghana Reddy Executive Boys & PG Hostel',
     description: 'Comfort • Safety • Convenience — Your Home in Hyderabad',
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Keerthi Reddy Hostel',
+    siteName: 'Meghana Reddy Hostel',
   },
   twitter: {
     card: 'summary_large_image',
@@ -52,7 +52,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LodgingBusiness',
-              name: 'Keerthi Reddy Executive Boys & PG Hostel',
+              name: 'Meghana Reddy Executive Boys & PG Hostel',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Manikonda, Shaikpet',

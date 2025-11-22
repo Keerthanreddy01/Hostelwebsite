@@ -85,13 +85,15 @@ export default function Rooms() {
             whileHover={{ y: -8, scale: 1.02 }}
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-700"
           >
-            <div className="aspect-video bg-gradient-to-br from-primary-100 via-blue-50 to-indigo-100 dark:from-primary-900 dark:via-blue-900 dark:to-indigo-900 flex items-center justify-center p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-200/20 to-transparent dark:from-primary-800/20"></div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  {room.id.charAt(0)}
+            <div className="aspect-video bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100 dark:from-blue-900 dark:via-indigo-900 dark:to-purple-900 flex items-center justify-center p-8 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent dark:from-blue-800/20"></div>
+              <div className="text-center relative z-10">
+                <div className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-2 flex gap-2 justify-center">
+                  {Array.from({ length: parseInt(room.id.charAt(0)) }).map((_, i) => (
+                    <div key={i} className="w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+                  ))}
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Sharing</div>
+                <div className="text-sm text-gray-700 dark:text-gray-300 font-semibold">{room.title}</div>
               </div>
             </div>
 

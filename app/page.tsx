@@ -46,7 +46,7 @@ export default function Home() {
       <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8 pb-24">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Keerthi Reddy Executive Boys & PG Hostel. All rights reserved.
+            © {new Date().getFullYear()} Meghana Reddy Executive Boys & PG Hostel. All rights reserved.
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
             Manikonda, Shaikpet, Hyderabad, Telangana • +91 8522002814

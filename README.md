@@ -1,6 +1,6 @@
-# Keerthi Reddy Executive Boys & PG Hostel
+# Meghana Reddy Executive Boys & PG Hostel
 
-Welcome to **Keerthi Reddy Executive Boys & PG Hostel** - Your premium home in Manikonda, Hyderabad. We offer comfortable, safe, and affordable accommodation for students and working professionals.
+Welcome to **Meghana Reddy Executive Boys & PG Hostel** - Your premium home in Manikonda, Hyderabad. We offer comfortable, safe, and affordable accommodation for students and working professionals.
 
 ## 🏠 About Us
 
@@ -94,4 +94,4 @@ Our residents appreciate the clean rooms, friendly management, quality food, sec
 
 ---
 
-*Experience comfortable living with Keerthi Reddy Executive Boys & PG Hostel - Where comfort meets convenience!*
+*Experience comfortable living with Meghana Reddy Executive Boys & PG Hostel - Where comfort meets convenience!*
