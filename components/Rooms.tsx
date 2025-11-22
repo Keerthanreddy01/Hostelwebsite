@@ -6,15 +6,6 @@ import { FiWifi, FiLock, FiZap, FiDroplet } from 'react-icons/fi'
 
 const roomData = [
   {
-    id: '4-sharing',
-    title: '4 Sharing Room',
-    description: 'Spacious, well-ventilated rooms with individual lockers, study tables, and premium mattresses.',
-    price: '₹6,500/month',
-    image: '/rooms/4-sharing.jpg',
-    amenities: ['WiFi', 'Lockers', 'Hot Water', 'CCTV'],
-    features: ['Individual study desk', 'Attached bathroom', 'Daily housekeeping', 'Spacious storage'],
-  },
-  {
     id: '5-sharing',
     title: '5 Sharing Room',
     description: 'Economical option with essential comforts, perfect for students and working professionals.',
@@ -22,6 +13,21 @@ const roomData = [
     image: '/rooms/5-sharing.jpg',
     amenities: ['WiFi', 'Lockers', 'Hot Water', 'CCTV'],
     features: ['Personal locker', 'Common bathroom', 'Regular cleaning', 'Budget-friendly'],
+    gradient: 'from-green-100 via-emerald-50 to-teal-100 dark:from-green-900 dark:via-emerald-900 dark:to-teal-900',
+    dotColor: 'bg-green-600 dark:bg-green-400',
+    borderColor: 'hover:border-green-200 dark:hover:border-green-700',
+  },
+  {
+    id: '4-sharing',
+    title: '4 Sharing Room',
+    description: 'Spacious, well-ventilated rooms with individual lockers, study tables, and premium mattresses.',
+    price: '₹6,500/month',
+    image: '/rooms/4-sharing.jpg',
+    amenities: ['WiFi', 'Lockers', 'Hot Water', 'CCTV'],
+    features: ['Individual study desk', 'Attached bathroom', 'Daily housekeeping', 'Spacious storage'],
+    gradient: 'from-blue-100 via-indigo-50 to-purple-100 dark:from-blue-900 dark:via-indigo-900 dark:to-purple-900',
+    dotColor: 'bg-blue-600 dark:bg-blue-400',
+    borderColor: 'hover:border-blue-200 dark:hover:border-blue-700',
   },
   {
     id: '3-sharing',
@@ -31,6 +37,9 @@ const roomData = [
     image: '/rooms/3-sharing.jpg',
     amenities: ['WiFi', 'Lockers', 'Hot Water', 'CCTV'],
     features: ['More personal space', 'Attached bathroom', 'Premium amenities', 'Quiet environment'],
+    gradient: 'from-orange-100 via-amber-50 to-yellow-100 dark:from-orange-900 dark:via-amber-900 dark:to-yellow-900',
+    dotColor: 'bg-orange-600 dark:bg-orange-400',
+    borderColor: 'hover:border-orange-200 dark:hover:border-orange-700',
   },
   {
     id: '2-sharing',
@@ -40,6 +49,9 @@ const roomData = [
     image: '/rooms/2-sharing.jpg',
     amenities: ['WiFi', 'Lockers', 'Hot Water', 'CCTV'],
     features: ['Maximum privacy', 'Attached bathroom', 'AC available', 'Premium comfort'],
+    gradient: 'from-purple-100 via-fuchsia-50 to-pink-100 dark:from-purple-900 dark:via-fuchsia-900 dark:to-pink-900',
+    dotColor: 'bg-purple-600 dark:bg-purple-400',
+    borderColor: 'hover:border-purple-200 dark:hover:border-purple-700',
   },
 ]
 
@@ -82,33 +94,45 @@ export default function Rooms() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-700"
+            whileHover={{ y: -10, scale: 1.03 }}
+            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 dark:border-gray-700 ${room.borderColor}`}
           >
-            <div className="aspect-video bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100 dark:from-blue-900 dark:via-indigo-900 dark:to-purple-900 flex items-center justify-center p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent dark:from-blue-800/20"></div>
+            <div className={`aspect-video bg-gradient-to-br ${room.gradient} flex items-center justify-center p-8 relative overflow-hidden`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent dark:from-black/30"></div>
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+                  backgroundSize: '24px 24px'
+                }}></div>
+              </div>
               <div className="text-center relative z-10">
-                <div className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-2 flex gap-2 justify-center">
+                <div className="flex gap-3 justify-center mb-4 flex-wrap">
                   {Array.from({ length: parseInt(room.id.charAt(0)) }).map((_, i) => (
-                    <div key={i} className="w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+                    <motion.div
+                      key={i}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.1 * i, type: "spring", stiffness: 200 }}
+                      className={`w-6 h-6 ${room.dotColor} rounded-full shadow-lg`}
+                    ></motion.div>
                   ))}
                 </div>
-                <div className="text-sm text-gray-700 dark:text-gray-300 font-semibold">{room.title}</div>
+                <div className="text-base font-bold text-gray-800 dark:text-gray-200">{room.title}</div>
               </div>
             </div>
 
-            <div className="p-5 space-y-4">
+            <div className="p-6 space-y-4">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {room.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed">
                   {room.description}
                 </p>
               </div>
 
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+              <div className="flex items-center justify-between py-2">
+                <span className="text-3xl font-extrabold text-primary-600 dark:text-primary-400">
                   {room.price}
                 </span>
               </div>
@@ -119,9 +143,9 @@ export default function Rooms() {
                   return (
                     <span
                       key={amenity}
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-700 dark:to-gray-800 rounded-lg text-xs font-semibold shadow-sm"
                     >
-                      {Icon && <Icon className="w-3 h-3" />}
+                      {Icon && <Icon className="w-3.5 h-3.5" />}
                       {amenity}
                     </span>
                   )
@@ -130,9 +154,9 @@ export default function Rooms() {
 
               <button
                 onClick={() => setExpandedRoom(expandedRoom === room.id ? null : room.id)}
-                className="w-full text-sm text-primary-600 dark:text-primary-400 hover:underline font-medium"
+                className="w-full text-sm text-primary-600 dark:text-primary-400 hover:underline font-semibold"
               >
-                {expandedRoom === room.id ? 'Show less' : 'More details'}
+                {expandedRoom === room.id ? '▲ Show less' : '▼ More details'}
               </button>
 
               {expandedRoom === room.id && (
@@ -155,9 +179,9 @@ export default function Rooms() {
 
               <button
                 onClick={scrollToBooking}
-                className="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-medium transition-colors duration-200"
+                className="w-full py-3.5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white rounded-xl font-bold text-base transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                Book Now
+                Book Now →
               </button>
             </div>
           </motion.article>
