@@ -29,25 +29,57 @@ export default function BookingForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Message for hostel owner
-    const ownerMessage = `🏠 *New Room Availability Request*\n\n` +
-      `👤 *Name:* ${data.name}\n` +
-      `📱 *Phone:* ${data.phone}\n` +
-      `📧 *Email:* ${data.email || 'Not provided'}\n` +
-      `🛏️ *Room Type:* ${data.roomType}\n` +
-      `📅 *Preferred Check-in:* ${data.checkin}\n` +
-      `💬 *Message:* ${data.message || 'No additional message'}\n\n` +
-      `Please contact them to confirm availability.`
+    // Message for hostel owner - Enhanced formatting
+    const ownerMessage = 
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `🏠 *NEW BOOKING ENQUIRY*\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      
+      `👤 *GUEST DETAILS*\n` +
+      `   Name: *${data.name}*\n` +
+      `   Phone: *${data.phone}*\n` +
+      `   Email: ${data.email || 'Not provided'}\n\n` +
+      
+      `🛏️ *ROOM REQUIREMENT*\n` +
+      `   Type: *${data.roomType}*\n` +
+      `   Check-in: *${data.checkin}*\n\n` +
+      
+      `💬 *MESSAGE*\n` +
+      `   ${data.message || 'No additional message'}\n\n` +
+      
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `⏰ Received: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' })}\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━`
 
-    // Thank you message for customer
-    const customerMessage = `✅ *Thank You for Your Interest!*\n\n` +
-      `Dear ${data.name},\n\n` +
-      `We have received your room availability request for *${data.roomType}*.\n\n` +
-      `📞 We will contact you shortly at *${data.phone}* to confirm availability and discuss further details.\n\n` +
+    // Thank you message for customer - Enhanced formatting
+    const customerMessage = 
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `✅ *BOOKING ENQUIRY RECEIVED*\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      
+      `Dear *${data.name}*,\n\n` +
+      `Thank you for your interest in our hostel! 🙏\n\n` +
+      
+      `📋 *YOUR ENQUIRY DETAILS*\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `🛏️  Room Type: *${data.roomType}*\n` +
+      `📅  Check-in Date: *${data.checkin}*\n` +
+      `📱  Contact: *${data.phone}*\n` +
+      `${data.email ? `📧  Email: ${data.email}\n` : ''}` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      
+      `⏳ *NEXT STEPS*\n` +
+      `   ✓ Our team will review your request\n` +
+      `   ✓ We'll contact you within 2-3 hours\n` +
+      `   ✓ Availability will be confirmed\n\n` +
+      
       `🏠 *Meghana Reddy Executive Boys & PG Hostel*\n` +
       `📍 Manikonda, Hyderabad\n` +
-      `📱 +91 8522002814\n\n` +
-      `Thank you for choosing us! 🙏`
+      `📞 +91 8522002814\n\n` +
+      
+      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `💚 Thank you for choosing us!\n` +
+      `━━━━━━━━━━━━━━━━━━━━━━━━━`
 
     const ownerWhatsAppURL = `https://wa.me/918522002814?text=${encodeURIComponent(ownerMessage)}`
     const customerWhatsAppURL = `https://wa.me/91${data.phone.replace(/\D/g, '')}?text=${encodeURIComponent(customerMessage)}`
