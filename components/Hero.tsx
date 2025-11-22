@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Building Image Overlay */}
       <div className="absolute inset-0 opacity-35">
         <Image 
-          src="/building.png" 
+          src="/building.jpg" 
           alt="Hostel Building" 
           fill
           className="object-cover"
