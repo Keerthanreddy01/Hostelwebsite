@@ -1,266 +1,97 @@
-# Keerthi Reddy Executive Boys & PG Hostel Website
+# Keerthi Reddy Executive Boys & PG Hostel
 
-Modern, mobile-first website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Swiper** for an exceptional user experience.
+Welcome to **Keerthi Reddy Executive Boys & PG Hostel** - Your premium home in Manikonda, Hyderabad. We offer comfortable, safe, and affordable accommodation for students and working professionals.
 
-## 🚀 Features
+## 🏠 About Us
 
-### Modern Tech Stack
-- **Next.js 14** with App Router - Server-side rendering & static export
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling with custom theme
-- **Framer Motion** - Smooth, performant animations
-- **Swiper** - Touch-enabled carousels
-- **React Hook Form** - Efficient form validation
-- **React Icons** - Beautiful icon library
+Located in the prime area of Manikonda, Hyderabad, our hostel provides a perfect blend of comfort, safety, and convenience. We understand the needs of students and young professionals looking for a home away from home.
 
-### Mobile-First Design
-- Optimized for QR code scanning experience
-- Fast loading times (< 2s initial load)
-- Touch gestures for carousels
-- Responsive breakpoints for all devices
-- Sticky bottom action bar for quick access
+## ✨ Room Options
 
-### Key Features
-- ✅ Hero section with gradient effects
-- ✅ Interactive room cards with expandable details
-- ✅ Smooth-scrolling amenities grid
-- ✅ Touch-enabled reviews carousel
-- ✅ Animated FAQ accordions
-- ✅ Integrated WhatsApp & call actions
-- ✅ Booking form with validation
-- ✅ Auto light/dark mode (system preference)
-- ✅ SEO optimized with meta tags & JSON-LD schema
-- ✅ PWA-ready with manifest
-- ✅ Accessibility compliant (WCAG 2.1)
+We offer **4 types of sharing rooms** to suit different preferences and budgets:
 
-## 📦 Installation
+- **4 Sharing Room** - ₹6,500/month
+  - Spacious, well-ventilated rooms
+  - Individual lockers and study tables
+  - Premium mattresses
+  - Attached bathroom
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+- **5 Sharing Room** - ₹5,500/month
+  - Economical option with essential comforts
+  - Perfect for budget-conscious students
+  - Personal locker for each resident
+  - Common bathroom facilities
 
-### Setup
+- **3 Sharing Room** - ₹7,500/month
+  - Balanced privacy and affordability
+  - More personal space
+  - Attached bathroom
+  - Quiet environment for studies
 
-```powershell
-# Navigate to project directory
-cd "c:\Users\keert\Desktop\PROJECTS\Hostel"
+- **2 Sharing Room** - ₹9,000/month
+  - Premium accommodation
+  - Maximum privacy and comfort
+  - Spacious living area
+  - Attached bathroom
+  - AC available
 
-# Install dependencies
-npm install
+## 🎯 Key Amenities
 
-# Run development server
-npm run dev
-```
+### Essential Facilities
+- **High-Speed WiFi** - 24/7 internet connectivity
+- **Hot Water** - Available at all times
+- **Security** - 24/7 CCTV surveillance
+- **Power Backup** - Uninterrupted electricity
+- **Individual Lockers** - Secure storage for valuables
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Additional Features
+- Daily housekeeping and cleaning services
+- Laundry facilities
+- Common area and recreational space
+- Visitor guidelines for guest accommodation
+- Regular maintenance and upkeep
 
-## 🛠️ Development
+## 🛡️ Safety & Security
 
-### Available Scripts
+Your safety is our priority:
+- 24/7 CCTV monitoring
+- Secure entry/exit systems
+- Experienced security personnel
+- Well-maintained fire safety equipment
+- Emergency contact numbers available
 
-```powershell
-npm run dev      # Start development server (hot reload)
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint
-```
+## 📍 Prime Location Benefits
 
-### Project Structure
+Located in Manikonda, one of Hyderabad's most sought-after residential areas:
+- Close to major IT hubs (HITEC City, Gachibowli)
+- Excellent connectivity via public transport
+- Nearby markets, restaurants, and shopping centers
+- Easy access to hospitals and medical facilities
+- Educational institutions in the vicinity
 
-```
-Hostel/
-├── app/
-│   ├── layout.tsx       # Root layout with metadata
-│   ├── page.tsx         # Home page
-│   └── globals.css      # Global styles
-├── components/
-│   ├── Hero.tsx         # Hero section
-│   ├── Rooms.tsx        # Room showcase
-│   ├── Amenities.tsx    # Amenities grid
-│   ├── Reviews.tsx      # Reviews carousel
-│   ├── Rules.tsx        # Rules & regulations
-│   ├── FAQ.tsx          # FAQ accordion
-│   ├── Location.tsx     # Location & contact
-│   ├── BookingForm.tsx  # Booking form
-│   ├── StickyBar.tsx    # Bottom action bar
-│   ├── WhatsAppButton.tsx # Floating WhatsApp
-│   └── ThemeProvider.tsx # Theme context
-├── public/
-│   └── manifest.json    # PWA manifest
-├── assets/
-│   └── images/          # Static images
-├── package.json
-├── tsconfig.json
-├── tailwind.config.js
-├── next.config.js
-└── postcss.config.js
-```
+## 📞 Contact Us
 
-## ✏️ Customization Guide
+**Phone:** [8522002814](tel:+918522002814)
 
-### Update Room Prices
-Edit `components/Rooms.tsx`:
-```typescript
-const roomData = [
-  { price: '₹6,500/month', ... },  // Update prices here
-]
-```
+**WhatsApp:** [Click to Chat](https://wa.me/918522002814)
 
-### Change Contact Info
-Global search and replace:
-- Phone: `8522002814`
-- WhatsApp: Update in all `wa.me/` links
-- Owner name: Search `Balashow Reddy`
+**Location:** Manikonda, Hyderabad
 
-### Add/Remove Amenities
-Edit `components/Amenities.tsx`:
-```typescript
-const amenities = [
-  { icon: FiWifi, title: '...', description: '...' },
-  // Add new amenities here
-]
-```
+**Google Maps:** [Get Directions](https://maps.app.goo.gl/9AXq1ZTd7uUxfydv8)
 
-### Modify Rules
-Edit `components/Rules.tsx`:
-```typescript
-const rules = [
-  'Your rule here',
-  // Add/remove rules
-]
-```
+## 🌟 Why Choose Us?
 
-### Update FAQs
-Edit `components/FAQ.tsx`:
-```typescript
-const faqs = [
-  { question: '...', answer: '...' },
-  // Add new FAQs
-]
-```
+- **Affordable Pricing** - Competitive rates for quality accommodation
+- **Premium Comfort** - Well-furnished rooms with modern amenities
+- **Safe Environment** - Round-the-clock security and surveillance
+- **Convenient Location** - Near IT parks and educational institutions
+- **Friendly Management** - Responsive and cooperative staff
+- **No Hidden Charges** - Transparent pricing policy
 
-### Replace Images
-Place images in `public/` or `assets/images/rooms/` and update paths in components.
+## 🏆 What Our Residents Say
 
-### Google Maps Integration
-In `components/Location.tsx`, replace the placeholder div with:
-```tsx
-<iframe
-  src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  title="Hostel Location"
-/>
-```
-
-### Form Backend Integration
-Edit `components/BookingForm.tsx`:
-```typescript
-const onSubmit = async (data: FormData) => {
-  // Replace with real API
-  const response = await fetch('/api/booking', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-  // Handle response
-}
-```
-
-## 🌐 Deployment
-
-### Static Export (GitHub Pages / Netlify / Vercel)
-
-```powershell
-# Build static site
-npm run build
-
-# Output in /out directory
-# Deploy /out folder to hosting service
-```
-
-### Vercel (Recommended)
-```powershell
-npm i -g vercel
-vercel
-```
-
-### Netlify
-```powershell
-npm run build
-# Drag /out folder to Netlify
-```
-
-### Traditional Hosting
-Upload `/out` folder contents to web server root.
-
-## 🎨 Theme Customization
-
-### Colors
-Edit `tailwind.config.js`:
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: {
-        600: '#YOUR_COLOR',  // Main CTA color
-        // ...other shades
-      }
-    }
-  }
-}
-```
-
-### Fonts
-Edit `app/layout.tsx`:
-```typescript
-import { Inter, Poppins } from 'next/font/google'
-const font = Poppins({ subsets: ['latin'], weight: ['400', '600', '700'] })
-```
-
-## 📱 Mobile Optimization
-
-- All touch targets ≥ 44px
-- Sticky bottom bar for easy access
-- Swipe gestures enabled
-- Fast loading (< 2s)
-- Responsive images
-- Smooth animations (GPU-accelerated)
-
-## ♿ Accessibility
-
-- Semantic HTML
-- ARIA labels on interactive elements
-- Keyboard navigation support
-- Focus visible states
-- Screen reader friendly
-- Color contrast ≥ WCAG AA
-
-## 🔍 SEO
-
-- Optimized meta tags
-- JSON-LD structured data
-- Open Graph tags
-- Twitter Card tags
-- Fast loading times
-- Mobile-friendly
-- Semantic markup
-
-## 📞 Support
-
-For issues or questions:
-- Owner: Balashow Reddy
-- Phone: +91 8522002814
-- WhatsApp: https://wa.me/918522002814
-
-## 📄 License
-
-© 2024 Keerthi Reddy Executive Boys & PG Hostel. All rights reserved.
+Our residents appreciate the clean rooms, friendly management, quality food, secure environment, and excellent WiFi connectivity. We maintain high standards of housekeeping and provide a peaceful environment conducive to both work and study.
 
 ---
 
-**Built with ❤️ for quality living**
+*Experience comfortable living with Keerthi Reddy Executive Boys & PG Hostel - Where comfort meets convenience!*
