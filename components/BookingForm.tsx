@@ -29,62 +29,83 @@ export default function BookingForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Message for hostel owner - Simple and clear for easy understanding
+    // Message for hostel owner - Clean, professional, easy to scan
     const ownerMessage = 
-      `🔔 *नया कमरा बुकिंग का मैसेज*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      `🔔 *NEW ROOM BOOKING INQUIRY*\n` +
+      `═══════════════════════════\n\n` +
       
-      `👤 *नाम:* ${data.name}\n\n` +
+      `👤 *Guest Name*\n` +
+      `   ${data.name}\n\n` +
       
-      `📱 *मोबाइल नंबर:* ${data.phone}\n` +
-      `   (इस नंबर पर कॉल करें)\n\n` +
+      `📱 *Contact Number*\n` +
+      `   ${data.phone}\n` +
+      `   → Call this number to confirm\n\n` +
       
-      `🛏️ *कौन सा रूम चाहिए:*\n` +
-      `   ➜ *${data.roomType}*\n\n` +
+      `🛏️ *Room Preference*\n` +
+      `   ${data.roomType}\n\n` +
       
-      `📅 *कब आना है:* ${data.checkin}\n\n` +
+      `📅 *Check-in Date*\n` +
+      `   ${data.checkin}\n\n` +
       
-      (data.email ? `📧 Email: ${data.email}\n\n` : '') +
+      (data.email ? `📧 *Email Address*\n   ${data.email}\n\n` : '') +
       
-      (data.message ? `💬 *खास बात:* ${data.message}\n\n` : '') +
+      (data.message ? `💬 *Special Request*\n   ${data.message}\n\n` : '') +
       
-      `⏰ समय: ${new Date().toLocaleString('en-IN', { 
+      `⏰ *Received At*\n` +
+      `   ${new Date().toLocaleString('en-IN', { 
         timeZone: 'Asia/Kolkata', 
         hour: '2-digit',
         minute: '2-digit',
         day: '2-digit',
-        month: 'short'
+        month: 'short',
+        year: 'numeric'
       })}\n\n` +
       
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `✅ कृपया इन्हें कॉल करके\n` +
-      `   कमरा उपलब्ध है बताएं`
+      `═══════════════════════════\n` +
+      `✅ *ACTION REQUIRED*\n` +
+      `Please call the guest to confirm\n` +
+      `room availability and details.`
 
-    // Thank you message for customer - Enhanced formatting
+    // Thank you message for customer - Warm, clear, professional
     const customerMessage = 
-      `✅ *धन्यवाद! आपका मैसेज मिल गया*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      `✨ *BOOKING INQUIRY RECEIVED*\n` +
+      `═══════════════════════════\n\n` +
       
-      `नमस्ते *${data.name}* जी,\n\n` +
-      `हमारे हॉस्टल में रुचि दिखाने के लिए धन्यवाद! 🙏\n\n` +
+      `Dear *${data.name}*,\n\n` +
+      `Thank you for your interest in Meghana Reddy Executive Boys PG! 🏠\n\n` +
       
-      `📋 *आपकी जानकारी*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `🛏️  रूम: *${data.roomType}*\n` +
-      `📅  आने की तारीख: *${data.checkin}*\n` +
-      `📱  मोबाइल: *${data.phone}*\n` +
-      `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+      `📋 *YOUR INQUIRY DETAILS*\n` +
+      `───────────────────────────\n` +
+      `🛏️  Room Type: *${data.roomType}*\n` +
+      `📅  Check-in: *${data.checkin}*\n` +
+      `📱  Mobile: *${data.phone}*\n` +
+      `───────────────────────────\n\n` +
       
-      `⏳ *अगला कदम*\n` +
-      `   ✓ हम 2-3 घंटे में आपको कॉल करेंगे\n` +
-      `   ✓ कमरा उपलब्ध है या नहीं बताएंगे\n` +
-      `   ✓ सभी जानकारी देंगे\n\n` +
+      `⏳ *WHAT HAPPENS NEXT?*\n\n` +
+      `   ✓ We'll call you within 2-3 hours\n` +
+      `   ✓ Confirm room availability\n` +
+      `   ✓ Share complete details & pricing\n` +
+      `   ✓ Answer all your questions\n\n` +
       
-      `🏠 *मेघना रेड्डी एक्सक्यूटिव बॉयज़ PG*\n` +
-      `📍 मणिकोंडा, हैदराबाद\n` +
-      `📞 +91 8522002814\n\n` +
+      `📍 *PROPERTY DETAILS*\n` +
+      `───────────────────────────\n` +
+      `🏢  Meghana Reddy Executive Boys PG\n` +
+      `📌  Manikonda, Hyderabad\n` +
+      `📞  +91 8522002814\n` +
+      `───────────────────────────\n\n` +
       
-      `💚 धन्यवाद!`
+      `💼 *WHY CHOOSE US?*\n` +
+      `   • Fully furnished rooms\n` +
+      `   • Homely food included\n` +
+      `   • 24/7 security & WiFi\n` +
+      `   • Prime Manikonda location\n\n` +
+      
+      `If you need immediate assistance,\n` +
+      `feel free to call us directly!\n\n` +
+      
+      `We look forward to hosting you! 🙏\n\n` +
+      `Best regards,\n` +
+      `*Meghana Reddy PG Team*`
 
     const ownerWhatsAppURL = `https://wa.me/918522002814?text=${encodeURIComponent(ownerMessage)}`
     const customerWhatsAppURL = `https://wa.me/91${data.phone.replace(/\D/g, '')}?text=${encodeURIComponent(customerMessage)}`
